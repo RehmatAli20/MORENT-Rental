@@ -1,101 +1,90 @@
+"use client";
 import Image from "next/image";
-
+// import SwiperSlider from "./component/Slidercomponent";
+import Slidercomponent from "./component/Slidercomponent";
+import Recomended from "./component/Recomended";
+import Pick from "./component/Pick";
+import Drop from "./component/Drop";
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+    <>
+      <div className=" flex "> 
+        <div className="2xl:w-[1440px] m-auto h-auto w-[100%] mb-4 mt-0 bg-[#F6F7F9]">
+          <div className="w-[95%] h-[360px] sm:h-[300px] lg:h-[360px] flex m-auto justify-center items-center gap-[20px]">
+            <div
+              className=" flex flex-col justify-between  w-[100%] h-[100%] bg-[#59A3F4] sm:flex sm:items-center sm:justify-around sm:flex-col rounded-[10px]
+         md:w-[80%] md:h-[80%] lg:w-[50%]  lg:h-[62%] xl:w-[630px]  lg:flex  lg:justify-normal lg:items-start xl:h-[330px]
+        "
+            >
+              <div className=" ml-4 mt-0 xl:w-[200px]  h-[50%] xl:h-[244px]   flex flex-col justify-around  ">
+                <h1 className="xl:h-[30px] font-semibold text-[20px] text-customwhite">
+                  The Best Platform for Car Rental
+                </h1>
+                <p className="text-white w-[300px]">
+                  Ease of doing a car rental safely and reliably. Of course at a
+                  low price.
+                </p>
+                <button className="text-customwhite h-[44px] w-[120px] bg-customblue rounded-[5px]">
+                  Rental Car
+                </button>
+              </div>
+              <div className=" xl:h-[116px] xl:w-[306px] m-auto sm:m-0 lg:relative lg:left-[200px] lg:bottom-[30px] xl:relative xl:left-[200px] xl:bottom-[1px] ">
+                <Image
+                  src={"/card/car.png"}
+                  alt="car"
+                  width={270}
+                  height={106}
+                ></Image>
+              </div>
+            </div>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+            <div
+              className=" lg:w-[50%]
+        xl:w-[630px]  hidden lg:block xl:h-[330px] bg-customblue rounded-[10px]"
+            >
+              <div className=" ml-4 mt-4 xl:w-[200px] xl:h-[244px]  flex flex-col justify-around ">
+                <h1 className="xl:h-[30px] font-semibold text-[20px] text-customwhite">
+                  Easy way to rent a car at a low price
+                </h1>
+                <p className="text-white w-[300px]">
+                  Providing cheap car rental services and safe and comfortable
+                  facilities.
+                </p>
+                
+                <button className="text-customwhite h-[44px] w-[120px] bg-[#59A3F4] rounded-[5px]">
+                  Rental Car
+                </button>
+              </div>
+              <div className=" xl:h-[116px] xl:w-[306px] relative left-[200px] bottom-[30px]">
+                <Image
+                  src={"/card/car (1).png"}
+                  alt="car"
+                  width={270}
+                  height={106}
+                ></Image>
+              </div>
+            </div>
+          </div>
+
+          <div className=" h-auto p-5 xl:h-[162px]  m-8 md:m-1 flex justify-center items-center flex-col  sm:flex sm:items-center sm:justify-around sm:flex-wrap">
+            <Pick />
+            <div className="h-[60px]  flex justify-center xl:w-[60px] w-[100%] m-[30px] ">
+              <button className="h-[60px] w-[60px] bg-customblue rounded-[5px] flex justify-center items-center">
+                <Image
+                  src={"/icon/Swap.png"}
+                  alt="updwon"
+                  width={24}
+                  height={24}
+                ></Image>
+              </button>
+            </div>
+            <Drop />
+          </div>
+
+          <Slidercomponent />
+          <Recomended />
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+      </div>
+    </>
   );
 }

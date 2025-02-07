@@ -11,7 +11,11 @@ export default {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
+        customblue: '#386DE9',
+        customwhite: '#FFFFFF',
+        customgray:'#91A3BF'
       },
+
     },
   },
   plugins: [],
